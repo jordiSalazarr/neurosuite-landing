@@ -19,13 +19,13 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="mailto:info@neurosuite.eu"
+                  href="mailto:support@neurosuite.eu"
                   className="flex items-center gap-3 text-sm text-white/80 hover:text-white transition-colors group"
                 >
                   <div className="w-10 h-10 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors flex items-center justify-center">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <span>info@neurosuite.eu</span>
+                  <span>support@neurosuite.eu</span>
                 </a>
               </li>
               <li>
@@ -46,7 +46,7 @@ export function Footer() {
             <h4 className="font-semibold mb-6 text-lg">Síguenos</h4>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/company/neurosuiteeu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 hover:scale-110 transition-all duration-300"
