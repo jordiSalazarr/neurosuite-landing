@@ -21,7 +21,7 @@ export default function Page() {
         <Services />
         <AboutUs />
         {/*<Evidence />*/}
-        {/*<FAQs />*/}
+        {/*<FAQs aa/>*/}
         <FinalCTA />
       </main>
       <Footer />
