@@ -38,7 +38,11 @@ export function ConsentBanner() {
           <Button variant="outline" size="sm" onClick={handleReject} className="border-[#1F2937]/20 bg-transparent">
             Solo esenciales
           </Button>
-          <Button size="sm" onClick={handleAccept} className="bg-[#0FB5BA] hover:bg-[#0FB5BA]/90 text-white">
+          <Button
+            size="sm"
+            onClick={handleAccept}
+            className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white transition-opacity"
+          >
             Aceptar todas
           </Button>
           <button onClick={handleReject} className="p-2 hover:bg-[#F3F4F6] rounded-md transition-colors">

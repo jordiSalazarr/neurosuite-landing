@@ -16,7 +16,7 @@ export function Pricing() {
       features: [
         "Hasta 30 evaluaciones/mes",
         "Reportes PDF automáticos",
-        "Subtests principales (HVLT-R, BVMT-R, TMT, Fluencia)",
+        "Evaluaciones principales de memoria, atención y función ejecutiva",
         "Soporte por email",
         "Almacenamiento seguro en UE",
       ],

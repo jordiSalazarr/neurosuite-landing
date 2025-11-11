@@ -57,18 +57,25 @@ export function DemoDialog({ open, onOpenChange }: DemoDialogProps) {
       <Dialog open={open} onOpenChange={handleClose}>
         <DialogContent className="sm:max-w-md">
           <div className="text-center py-6 space-y-6">
-            <div className="w-16 h-16 rounded-full bg-[#0FB5BA]/10 flex items-center justify-center mx-auto">
-              <CheckCircle2 className="w-8 h-8 text-[#0FB5BA]" />
+            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+              <CheckCircle2 className="w-8 h-8 text-primary" />
             </div>
             <div className="space-y-2">
-              <h3 className="text-2xl font-bold text-[#1F2937]">¡Solicitud recibida!</h3>
-              <p className="text-[#1F2937]/70 text-pretty">
+              <h3 className="text-2xl font-bold text-foreground">¡Solicitud recibida!</h3>
+              <p className="text-muted-foreground text-pretty">
                 Nos pondremos en contacto contigo en las próximas 24 horas.
               </p>
             </div>
             <div className="space-y-3">
-              <Button className="w-full bg-[#0FB5BA] hover:bg-[#0FB5BA]/90 text-white" asChild>
-                <a href="#calendly">
+              <Button
+                className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white transition-opacity"
+                asChild
+              >
+                <a
+                  href="https://calendly.com/jordisalazarbadia/lead-neurosuite"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Calendar className="w-4 h-4 mr-2" />
                   Agenda ahora en Calendly
                 </a>
@@ -88,7 +95,7 @@ export function DemoDialog({ open, onOpenChange }: DemoDialogProps) {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl text-[#1F2937]">Solicitar demo</DialogTitle>
+          <DialogTitle className="text-2xl text-foreground">Solicitar demo</DialogTitle>
           <DialogDescription className="text-pretty">
             Completa el formulario y te contactaremos para agendar una demostración personalizada.
           </DialogDescription>
@@ -203,15 +210,18 @@ export function DemoDialog({ open, onOpenChange }: DemoDialogProps) {
               checked={formData.consent}
               onCheckedChange={(checked) => setFormData({ ...formData, consent: checked as boolean })}
             />
-            <Label htmlFor="consent" className="text-sm text-[#1F2937]/70 leading-relaxed cursor-pointer">
+            <Label htmlFor="consent" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
               Acepto el tratamiento de mis datos según la{" "}
-              <a href="/privacidad" className="text-[#0FB5BA] hover:underline">
+              <a href="/privacidad" className="text-primary hover:underline">
                 política de privacidad
               </a>{" "}
               para recibir información sobre NeuroSuite. *
             </Label>
           </div>
-          <Button type="submit" className="w-full bg-[#0FB5BA] hover:bg-[#0FB5BA]/90 text-white">
+          <Button
+            type="submit"
+            className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white transition-opacity"
+          >
             Enviar y reservar
           </Button>
         </form>

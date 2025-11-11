@@ -1,60 +1,74 @@
 "use client"
 
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Play } from "lucide-react"
-import { DemoDialog } from "@/components/demo-dialog"
-import Image from "next/image"
+import { Sparkles } from "lucide-react"
 
 export function Hero() {
-  const [demoOpen, setDemoOpen] = useState(false)
-
   return (
-    <>
-      <section className="container mx-auto px-4 py-16 md:py-24">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1F2937] text-balance leading-tight">
-              Pruebas validadas. Informes en minutos.
-            </h1>
-            <p className="text-lg md:text-xl text-[#1F2937]/80 text-pretty leading-relaxed">
-              Digitaliza HVLT-R, BVMT-R, TMT, Fluencia, etc. con captura estructurada, scoring automático y reportes
-              listos para EMR/FHIR.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                onClick={() => setDemoOpen(true)}
-                size="lg"
-                className="bg-[#0FB5BA] hover:bg-[#0FB5BA]/90 text-white text-base"
-              >
-                Solicitar demo
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                asChild
-                className="border-[#1F2937] text-[#1F2937] hover:bg-[#F3F4F6] text-base bg-transparent"
-              >
-                <a href="#calendly">Agenda una reunión</a>
-              </Button>
-            </div>
-          </div>
-          <div className="space-y-4">
-            <div className="relative aspect-video bg-[#F3F4F6] rounded-lg overflow-hidden border border-border">
-              <Image src="/neurocognitive-assessment-dashboard-with-patient-d.jpg" alt="NeuroSuite Dashboard" fill className="object-cover" />
-              <button className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors group">
-                <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Play className="w-8 h-8 text-[#0FB5BA] ml-1" fill="currentColor" />
-                </div>
-              </button>
-            </div>
-            <div className="relative aspect-[4/3] bg-white rounded-lg overflow-hidden border border-border shadow-sm">
-              <Image src="/clinical-neurocognitive-assessment-report-pdf-prev.jpg" alt="Reporte PDF Preview" fill className="object-cover" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <DemoDialog open={demoOpen} onOpenChange={setDemoOpen} />
-    </>
+   <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+  <div className="absolute inset-0 z-0">
+    {/* Capa 1 — vídeo ligeramente desaturado y oscurecido */}
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="w-full h-full object-cover scale-105 brightness-[0.55] saturate-[0.8]"
+    >
+      <source
+        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+        type="video/mp4"
+      />
+    </video>
+
+    {/* Capa 2 — degradado sutil de refuerzo en parte superior e inferior */}
+    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+
+    {/* (Opcional) Capa 3 — vineta radial muy ligera detrás del texto */}
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.45)_0%,rgba(0,0,0,0.7)_100%)]" />
+  </div>
+
+  <div className="container relative z-10 mx-auto px-4 py-16 md:py-24">
+    <div className="max-w-4xl mx-auto text-center space-y-8">
+      <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
+        <Sparkles className="w-4 h-4 text-primary" />
+        <span className="text-sm font-medium text-primary">Evaluaciones neurocognitivas del futuro</span>
+      </div>
+
+      {/* 🔹 Añadimos una sombra de texto muy ligera para contraste */}
+      <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-br from-white via-white to-primary bg-clip-text text-transparent drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)] leading-[1.1]">
+        Digitaliza tus evaluaciones clínicas
+      </h1>
+
+      <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]">
+        Software profesional para evaluaciones neurocognitivas digitales con scoring automático e informes
+        instantáneos.
+      </p>
+
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button
+          asChild
+          size="lg"
+          className="hover:opacity-90 text-white text-lg px-8 py-6 h-auto shadow-md hover:shadow-lg transition-all hover:scale-105"
+        >
+          <a href="https://calendly.com/jordisalazarbadia/lead-neurosuite" target="_blank" rel="noopener noreferrer">
+            Solicitar demo gratuita
+          </a>
+        </Button>
+
+        <Button
+          variant="outline"
+          size="lg"
+          asChild
+          className="border-2 border-primary/30 text-white hover:bg-primary/10 text-lg px-8 py-6 h-auto bg-white/10 backdrop-blur-[2px] transition-all"
+        >
+          <a href="#servicios">Descubre nuestros servicios</a>
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   )
 }

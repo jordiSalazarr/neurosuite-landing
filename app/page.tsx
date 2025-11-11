@@ -1,12 +1,10 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
-import { TrustBar } from "@/components/trust-bar"
 import { ValueProps } from "@/components/value-props"
 import { HowItWorks } from "@/components/how-it-works"
+import { Services } from "@/components/services"
+import { AboutUs } from "@/components/about-us"
 import { Evidence } from "@/components/evidence"
-import { Security } from "@/components/security"
-import { Integrations } from "@/components/integrations"
-import { Pricing } from "@/components/pricing"
 import { FAQs } from "@/components/faqs"
 import { FinalCTA } from "@/components/final-cta"
 import { Footer } from "@/components/footer"
@@ -18,16 +16,14 @@ export default function Page() {
     <>
       <AnnouncementBar />
       <Navbar />
-      <main>
+      <main role="main" aria-label="Contenido principal">
         <Hero />
-        <TrustBar />
         <ValueProps />
         <HowItWorks />
-        <Evidence />
-        <Security />
-        <Integrations />
-        <Pricing />
-        <FAQs />
+        <Services />
+        <AboutUs />
+        {/*<Evidence />*/}
+        {/*<FAQs />*/}
         <FinalCTA />
       </main>
       <Footer />

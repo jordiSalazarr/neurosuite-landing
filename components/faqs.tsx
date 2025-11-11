@@ -10,7 +10,7 @@ export function FAQs() {
     {
       question: "¿Qué subtests incluye?",
       answer:
-        "Actualmente incluimos HVLT-R, BVMT-R, Trail Making Test (A y B), Fluencia verbal (fonológica y semántica), Dígitos (WAIS-IV), y Symbol Digit Modalities Test. Estamos añadiendo nuevos tests validados cada trimestre según las necesidades de nuestros usuarios.",
+        "Actualmente incluimos evaluaciones de memoria verbal y visual, atención y función ejecutiva, fluencia verbal (fonológica y semántica), memoria de trabajo, y velocidad de procesamiento. Estamos añadiendo nuevas evaluaciones validadas cada trimestre según las necesidades de nuestros usuarios.",
     },
     {
       question: "¿Cómo tratáis los datos personales (RGPD)?",
