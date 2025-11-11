@@ -120,7 +120,10 @@ export function Services() {
               className="w-full border-2 border-[oklch(0.60_0.24_290)] text-[oklch(0.60_0.24_290)] hover:bg-[oklch(0.60_0.24_290)] hover:text-white text-lg h-12 transition-all hover:scale-105 bg-transparent"
               asChild
             >
-              <a href="#demo">Contactar</a>
+              <a
+                  href="mailto:support@neurosuite.eu"
+                  className="flex items-center gap-3 text-sm text-white/80 hover:text-white transition-colors group"
+                >Contactar</a>
             </Button>
           </CardContent>
         </Card>
