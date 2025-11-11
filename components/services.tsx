@@ -122,7 +122,7 @@ export function Services() {
             >
               <a
                   href="mailto:support@neurosuite.eu"
-                  className="flex items-center gap-3 text-sm text-white/80 hover:text-white transition-colors group"
+                  className="flex items-center gap-3 text-sm text-black/80 hover:text-white transition-colors group"
                 >Contactar</a>
             </Button>
           </CardContent>
