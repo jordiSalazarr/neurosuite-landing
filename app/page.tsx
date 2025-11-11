@@ -8,13 +8,11 @@ import { Evidence } from "@/components/evidence"
 import { FAQs } from "@/components/faqs"
 import { FinalCTA } from "@/components/final-cta"
 import { Footer } from "@/components/footer"
-import { AnnouncementBar } from "@/components/announcement-bar"
 import { ConsentBanner } from "@/components/consent-banner"
 
 export default function Page() {
   return (
     <>
-      <AnnouncementBar />
       <Navbar />
       <main role="main" aria-label="Contenido principal">
         <Hero />
